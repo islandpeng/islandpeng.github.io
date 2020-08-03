@@ -1,0 +1,155 @@
+/* media
+----------------------------------------------------------------------------*/
+/* 各解析度原始單位 */
+@media screen and (min-width: 1700px) {
+	/*
+	.kvImg img{
+		width: auto;
+		height: 120%;
+	}
+*/
+}
+
+@media screen and (max-width: 1024px) {
+	.hBox {
+		padding: 0.6rem 0 1rem 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	/* main
+	------------------------------------------------------------------------------*/
+	main {
+		padding-top: 3.5rem;
+	}
+
+	/* kv
+	---------------------------------------------*/
+	.hBox {
+		padding: 0;
+		width: 100%;
+	}
+
+	h2 {
+		font-size: 0.4rem;
+	}
+
+	h3 {
+		font-size: 0.26rem;
+	}
+
+	.kvTent {
+		height: 10.2rem;
+	}
+
+	.psText {
+		left: 0.5rem;
+		color: #ffffff;
+	}
+
+	a.kv_anc {
+		font-size: 0.2rem;
+		top: 0.4rem;
+	}
+
+	a.kv_anc img {
+		width: 0.8rem;
+		margin: 0 auto 0.2rem auto;
+	}
+
+	.m_flexBox {
+		display: block;
+	}
+
+	/** 視差物件 ********************************************************** start */
+
+	.slashes {
+		font-size: 0.77rem;
+		right: -0.4em;
+		bottom: 50%;
+	}
+
+	.wCube {
+		width: 1.9rem;
+		height: 0.8rem;
+		top: -0.4rem;
+		left: calc(50% - 0.85rem);
+	}
+
+	.fish01 {
+		width: 3rem;
+		right: -1.8rem;
+		bottom: 80%;
+	}
+
+	.fish02 {
+		width: 3.5rem;
+		left: 55%;
+		top: 20%;
+	}
+
+	.fish03 {
+		width: 7rem;
+		opacity: 0.3;
+		left: -20%;
+		bottom: 50%;
+	}
+
+	/** 視差物件 ********************************************************** end */
+
+	/* wbListBox */
+	.wbListBox {
+		max-width: 500px;
+		margin-top: 0.6rem;
+	}
+
+	.wbList {
+		width: 50%;
+		max-width: none;
+		margin-bottom: 0.8rem;
+	}
+	.wbImg{
+		max-width: 177px;
+		margin: auto;
+	}
+
+	.wbName {
+		font-size: 0.3rem;
+		margin-top: 1.4em;
+	}
+
+	.wbSlogan {
+		font-size: 0.26rem;
+		margin-top: 0.8em;
+	}
+
+	/* wbLB */
+	.wbLbName{
+		font-size: 0.45rem;
+	}
+	.wbLbLink{
+		font-size: 0.4rem;
+	}
+	.closeWbBtn{
+		width: 0.8rem;
+		height: 0.8rem;
+		top: 0;
+	}
+
+}
+
+@media screen and (max-width: 640px) {}
+
+@media screen and (max-width: 585px) {
+	.kvImg {
+		left: 90%;
+		bottom: 0;
+	}
+	.wbList {
+		width: 100%;
+		max-width: none;
+	}
+}
+
+@media screen and (max-width: 480px) {}

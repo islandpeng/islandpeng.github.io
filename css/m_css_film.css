@@ -1,0 +1,129 @@
+/* media
+----------------------------------------------------------------------------*/
+/* 各解析度原始單位 */
+@media screen and (min-width: 1700px) {
+	.kvImg img{
+		width: auto;
+		height: 120%;
+	}
+}
+@media screen and (max-width: 1080px) {
+}
+@media screen and (max-width: 900px) {
+	/* .subTlt{
+		height: 50%;
+	} */
+}
+@media screen and (max-width: 768px) {
+	body,html{ font-size: 50px;}
+
+	/* main
+	------------------------------------------------------------------------------*/
+	main{ padding-top: 3.5rem;}
+
+	/* kv
+	---------------------------------------------*/
+	.kv{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.hBox{
+		padding: 0;
+		bottom: calc(100% + 0.7rem);
+		right: 0;
+		top: auto;
+		-webkit-transform: none;
+		transform: none;
+		width: 100%;
+		min-width: 0;
+	}
+	h2{
+			font-size: 0.4rem;
+	}
+	h3{
+			font-size: 0.26rem;
+	}
+	.kvTent{
+		height: 8.2rem;
+	}
+	.psText{
+		color: #ffffff;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		right: auto;
+		left: 0.4rem;
+	}
+	a.kv_anc{
+		font-size: 0.2rem;
+		top: 0.7rem;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	a.kv_anc img{
+		width: 0.8rem;
+		margin: 0 auto 0.2rem auto;
+	}
+
+	/** 視差物件 ********************************************************** start */
+	.kvImg{
+		top: 40%;
+	}
+	.slashes{
+		font-size: 0.77rem;
+		right: -0.4em;
+		bottom: 50%;
+	}
+	.wCube{
+		width: 1.9rem;
+		height: 0.8rem;
+		top: -0.4rem;
+		right: 50%;
+		-webkit-transform: translateX(50%);
+		transform: translateX(50%);
+	}
+
+	/** 視差物件 ********************************************************** end */
+	
+	.tent{
+		padding-top: 1rem;
+		padding-bottom: 1.2rem;
+	}
+	h4{
+		font-size: 0.48rem;
+	}
+
+	.tent .flexBox{
+		margin-top: 0.9rem;
+	}
+	.filmBox{
+		width: 50%;
+	}
+	.subTlt{
+		height: 0.7rem;
+	}
+	.filmName{
+		font-size: 0.3rem;
+	}
+	.filmSec{
+		font-size: 0.24rem;
+		margin-top: 0.5em;
+	}
+	.filmIcon{
+		width: 0.7rem;
+	}
+    
+}
+@media screen and (max-width: 640px) {
+}
+@media screen and (max-width: 585px) {
+	.tent .flexBox{
+		display: block;
+	}
+	.filmBox{
+		width: auto;
+	}
+}
+@media screen and (max-width: 480px) {    
+}

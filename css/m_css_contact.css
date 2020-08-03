@@ -1,0 +1,99 @@
+/* media
+----------------------------------------------------------------------------*/
+/* 各解析度原始單位 */
+@media screen and (max-height: 620px) and (min-width: 769px){
+	.psText, .illText{
+		top: 7rem;
+	}
+}
+@media screen and (max-height: 580px) and (min-width: 769px){
+	.contentBord, .wrapper{
+		min-height: 580px!important;
+	}
+}
+@media screen and (max-height: 620px) and (max-width: 768px){
+	.contentBord, .wrapper{
+			min-height: 620px!important;
+	}
+}
+@media screen and (max-width: 1160px) {
+}
+@media screen and (max-width: 1080px) {
+}
+@media screen and (max-width: 1024px) {
+        
+}
+@media screen and (max-width: 980px) {
+	.navOpen .psText{ left: calc(100% + 0.5rem);}
+	.contentBord{
+		padding-right: 20px;
+	}
+}
+@media screen and (max-width: 768px) {
+	
+	.illText{ display: none;}
+	.viewBlock{
+		max-width: 516px;
+		width: auto;
+		margin-bottom: 1rem;
+		height: calc(100% - 1rem);
+	}
+	.layerBox{
+		height: 50%;
+		max-height: 423px;
+	}
+	/** 視差物件 ********************************************************** start */
+	.shadowBox{
+		width: 100%;
+		max-width: 516px;
+		bottom: -0.8rem;
+		left: 0.3rem;
+	}
+	.wcub01{
+		width: 34.5%;
+		height: 0.5rem;
+		left: 21%;
+	}
+	.wcub02{ display: none;}
+
+	/** 視差物件 ********************************************************** end */
+	.blackBox{
+		max-width: 516px;
+		max-height: 423px;
+		height: 50%;
+		padding: 0.6rem;
+	}
+	h2{
+		font-size: 0.5rem;
+		margin-bottom: 0.3rem;
+	}
+	h3{
+		font-size: 0.3rem;
+	}
+	.mailBox{
+		bottom: 0.5rem;
+		right: 0.4rem;
+	}    
+	.mailIcon{
+		width: 0.8rem;
+	}
+	.mailBox p{
+		font-size: 0.3rem;
+		margin-top: 0.3rem;
+	}
+	.slashBox{
+		font-size: 1.48rem;
+		top: -0.4em;
+		right: 0.1em;
+
+	}
+    
+}
+@media screen and (max-width: 640px) {
+}
+@media screen and (max-width: 585px) {
+}
+@media screen and (max-width: 480px) {    
+}
+@media screen and (max-width: 319px) {
+}

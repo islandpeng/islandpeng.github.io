@@ -1,0 +1,101 @@
+/* media
+----------------------------------------------------------------------------*/
+/* 各解析度原始單位 */
+@media screen and (max-width: 1160px) {
+}
+@media screen and (max-width: 1080px) {
+}
+@media screen and (max-width: 1024px) {
+        
+}
+@media screen and (max-width: 768px) {
+	body,html{ font-size: 50px;}
+	.contentBord{
+		padding-left: 0;
+	}
+	.viewBlock{
+		width: auto;
+		display: block;
+	}
+	.wBox{
+		padding: 1.5rem 15px 2rem 15px;
+		width: auto;
+	}
+	.dlBox{
+		display: block;
+		max-width: none;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		padding-right: 0.2rem;
+	}
+	dl{
+		padding-left: 1.2rem;
+		max-width: none;
+	}
+	dt{
+		font-size: 0.34rem;
+	}
+	.blackBox{
+		z-index: 1;
+		width: auto;
+		height: 11.2rem;
+		padding: 0;
+		overflow: hidden;
+		position: relative;
+	}
+	.islandPic{
+		max-width: none;
+		width: auto;
+		margin-left: 0;
+		height: calc(100% - 3rem);
+		position: absolute;
+		top: 1.5rem;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.islandPic img{
+		width: auto;
+		height: 100%;
+	}
+	h2{
+		font-size: 0.5rem;
+		margin-bottom: 0.3rem;
+		padding-left: 0.6rem;
+	}
+	h3{
+		font-size: 0.3rem;
+		padding-left: 0.6rem;
+		margin-bottom: 0.2rem;
+	}
+	.slashBox{
+		font-size: 1.48rem;
+		top: auto;
+		bottom: 0.4em;
+		right: auto;
+		left: -0.3em;
+		-webkit-writing-mode: vertical-rl;
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+	}
+	.illText{
+		-webkit-transform: none;
+		transform: none;
+		top: 4.9rem;
+		position: absolute;
+	}
+	.navOpen .illText{
+		display: none;
+	}
+	.navOpen .socialBox img.pc{ display: block;}
+	.navOpen .socialBox img.mobile{ display: none;}
+    
+}
+@media screen and (max-width: 640px) {
+}
+@media screen and (max-width: 585px) {
+}
+@media screen and (max-width: 480px) {    
+}
+@media screen and (max-width: 319px) {
+}

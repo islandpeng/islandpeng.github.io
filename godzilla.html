@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+	<title>ISLAND's Collection</title>
+
+	<meta name="keywords" content="Island,collection,design,godzilla" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="ISLAND's Collection" />
+	<meta property="og:url" content="https://island.lai-chih.com/" />
+	<meta property="og:description" content="Welcome to Island's collection website." />
+	<meta name="description" content="Welcome to Island's collection website." />
+
+
+	<!-- FB 社群圖片 -->
+	<meta property="og:image" content="https://island.lai-chih.com/images/fb.jpg" />
+	<link rel="image_src" href="https://island.lai-chih.com/images/fb.jpg" />
+	<!-- 頁籤 icon -->
+	<link href="images/favicon.ico" rel="shortcut icon" />
+	<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_css.css">
+	<link rel="stylesheet" type="text/css" href="css/css_godzilla.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_m_css.css">
+	<link rel="stylesheet" type="text/css" href="css/m_css_godzilla.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<link rel="stylesheet" type="text/css" href="js.lib/slick.css">
+	<link rel="stylesheet" type="text/css" href="js.lib/slick-theme.css">
+
+	<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="godzilla">
+	<div class="loadingBox flexBox">
+		<div class="beforeLine"></div>
+		<div class="afterLine"></div>
+		<div class="loadImg ldI01">
+			<img src="images/Island_studio_cht.svg" alt="Island studio">
+		</div>
+		<div class="loadImg ldI02">
+			<img src="images/Island_studio.svg" alt="Island studio">
+		</div>
+		<div class="loadTxt">DESIGN BY<br />ISLAND</div>
+	</div>
+	<div class="wrapper" id="godzillaWrap">
+		<div class="contentBord">
+			<header>
+				<nav>
+					<div class="navBox">
+						<ul>
+							<li><a href="index.html">Homepage</a></li>
+							<li><a href="profile.html">Profile</a></li>
+							<li><a href="graphic.html">Graphic</a></li>
+							<li><a href="business.html">Business</a></li>
+							<li><a href="website.html">Website</a></li>
+							<li><a href="film.html">Film Editing</a></li>
+							<li><a class="active" href="javascript:;" title="Godzilla Gallery"><img src="images/nav_godzilla.png"
+										alt="Godzilla Gallery"></a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+						<div class="socialBox">
+							<a href="https://www.flickr.com/photos/islandpeng/albums" target="_blank" class="flickrLink">
+								<img class="pc" src="images/icon_flickr_black.png" alt="Island's flickr">
+								<img class="mobile" src="images/icon_flickr.png" alt="Island's flickr">
+							</a>
+							<a href="https://www.instagram.com/island_mothra/" target="_blank" class="igLink">
+								<img class="pc" src="images/icon_istagram_black.png" alt="Island's instagram">
+								<img class="mobile" src="images/icon_istagram.png" alt="Island's instagram">
+							</a>
+						</div>
+					</div>
+				</nav>
+				<div class="navBtn">
+					<div class="orgCube flexBox"><span></span></div>
+					<div class="greyCube"></div>
+				</div>
+			</header>
+			<main id="main">
+				<!-- BG -->
+				<!-- <div class="footerBG"></div> -->
+
+				<!-- KV -->
+				<div class="kv">
+					<div class="container flexBox">
+						<div class="hBox">
+							<h2 class="hImg"><img src="images/godzilla/godzilla_title.png" alt="Godzilla"></h2>
+							<h3>SPECIAL COLLECTION OF GODZILLA</h3>
+						</div>
+					</div>
+					<div class="socialLinkBox flexBox">
+						<a href="https://www.instagram.com/island_mothra/" target="_blank">
+							<img src="images/icon_istagram.png" alt="Island's instagram">
+						</a>
+						<a href="https://www.flickr.com/photos/islandpeng/albums" target="_blank">
+							<img src="images/icon_flickr.png" alt="Island's flickr">
+						</a>
+					</div>
+				</div>
+
+				<!-- intro -->
+				<div class="introBox">
+					<div class="container flexBox">
+						<div class="inImg"><img src="images/godzilla/GG_img01.png" alt=""></div>
+						<div class="inTxt">
+							<h4>GODZILLA</h4>
+							<h5>(JAPANESE: <span>ゴジラ</span> HEPBURN: GOJIRA)</h5>
+							<p>(About this sound listen)) is a monster originating from a series of Japanese films of the same name.
+								The character first appeared in Ishirō Honda's 1954 film Godzilla and became a worldwide pop culture
+								icon, appearing in various media, including 31 films produced by Toho, three Hollywood films, and
+								numerous video games, novels, comic books, television shows. It is often dubbed the "King of the
+								Monsters", a phrase first used in Godzilla, King of the Monsters!, the Americanized version of the
+								original film.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Gallery -->
+				<div class="galleryBox" id="galleryBox">
+					<div class="container">
+						<h4>GALLERY</h4>
+
+						<div class="flexBox setBox" v-for="(img, index) in imgList">
+							<div class="l_b">
+								<div class="galImgBox">
+									<div class="openImg" @click="openSlick(index, img.l_b[0].imgs, 0)">
+										<img :src="img.l_b[0].imgs[0].imgUrl" :alt="img.l_b[0].imgs[0].imgAlt">
+									</div>
+									<div class="loadGal">
+										<img src="images/godzilla/LOADING.gif" alt="" class="loadTimg">
+										<img src="images/godzilla/loadingBar.png" alt="" class="loadBar">
+									</div>
+								</div>
+								<div class="galImgBox">
+									<div class="openImg" @click="openSlick(index, img.l_b[1].imgs, 1)">
+										<img :src="img.l_b[1].imgs[0].imgUrl" :alt="img.l_b[1].imgs[0].imgAlt">
+									</div>
+								</div>
+								<div class="galImgBox">
+									<div class="openImg" @click="openSlick(index, img.l_b[2].imgs, 2)">
+										<img :src="img.l_b[2].imgs[0].imgUrl" :alt="img.l_b[2].imgs[0].imgAlt">
+									</div>
+									<div class="loadGal">
+										<img src="images/godzilla/ruler.png" alt="" class="loadRuler">
+									</div>
+								</div>
+								<div class="galImgBox">
+									<p class="loadGalTxt loadGalTxt02">MONSTER<br />UNERVIRSE</p>
+									<div class="openImg" @click="openSlick(index, img.l_b[3].imgs, 3)">
+										<img :src="img.l_b[3].imgs[0].imgUrl" :alt="img.l_b[3].imgs[0].imgAlt">
+									</div>
+								</div>
+								<div class="galImgBox">
+									<div class="openImg" @click="openSlick(index, img.l_b[4].imgs, 4)">
+										<img :src="img.l_b[4].imgs[0].imgUrl" :alt="img.l_b[4].imgs[0].imgAlt">
+									</div>
+									<div class="loadGal">
+										<img src="images/godzilla/ARROW.gif" alt="" class="loadArr">
+									</div>
+								</div>
+							</div>
+							<!-- r_b -->
+							<div class="r_b">
+								<div class="galImgBox">
+									<div class="openImg" @click="openSlick(index, img.r_b[0].imgs, 5)">
+										<img :src="img.r_b[0].imgs[0].imgUrl" :alt="img.r_b[0].imgs[0].imgAlt">
+									</div>
+									<div class="loadGal">
+										<img src="images/godzilla/CIRCLE_GIF.gif" alt="" class="loadCir">
+									</div>
+								</div>
+								<div class="galImgBox">
+									<p class="loadGalTxt">GODZILLA<br />MOVIE<br />POSTER</p>
+									<div class="openImg" @click="openSlick(index, img.r_b[1].imgs, 6)">
+										<img :src="img.r_b[1].imgs[0].imgUrl" :alt="img.r_b[1].imgs[0].imgAlt">
+									</div>
+									<div class="loadGal">
+										<img src="images/godzilla/ARROW.gif" alt="" class="loadArr">
+									</div>
+								</div>
+								<div class="galImgBox">
+									<div class="openImg" @click="openSlick(index, img.r_b[2].imgs, 7)">
+										<img :src="img.r_b[2].imgs[0].imgUrl" :alt="img.r_b[2].imgs[0].imgAlt">
+									</div>
+								</div>
+								<div class="galImgBox">
+									<div class="openImg" @click="openSlick(index, img.r_b[3].imgs, 8)">
+										<img :src="img.r_b[3].imgs[0].imgUrl" :alt="img.r_b[3].imgs[0].imgAlt">
+									</div>
+								</div>
+								<div class="galImgBox">
+									<div class="openImg" @click="openSlick(index, img.r_b[4].imgs, 9)">
+										<img :src="img.r_b[4].imgs[0].imgUrl" :alt="img.r_b[4].imgs[0].imgAlt">
+									</div>
+									<div class="loadGal">
+										<img src="images/godzilla/LOADING.gif" alt="" class="loadTimg">
+										<img src="images/godzilla/POINT.gif" alt="" class="loadBot">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 輪播區 -->
+					<div class="lightSlideBox">
+						<div class="flexBox">
+							<div class="slideMsk" @click="closeSlick()"></div>
+							<div class="sliderBox">
+								<div class="slickDiv">
+									<div v-for="(slickBox, index) in imgList">
+										<!-- 左邊 slide -->
+										<div class="choosePic" v-for="(slickSD, cid) in slickBox.l_b">
+											<div class="slider">
+												<div class="sliderImg" :data-imgb="slickImg.imgDirect" v-for="(slickImg, cid) in slickSD.imgs">
+													<div>
+														<img :src="slickImg.imgUrl" :alt="slickImg.imgAlt">
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- 右邊 slide -->
+										<div class="choosePic" v-for="(slickSD, cid) in slickBox.r_b">
+											<div class="slider">
+												<div class="sliderImg" :data-imgb="slickImg.imgDirect" v-for="(slickImg, cid) in slickSD.imgs">
+													<div>
+														<img :src="slickImg.imgUrl" :alt="slickImg.imgAlt">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="javascript:;" target="_blank" class="newTabBtn"><img src="images/img_newTab.png" alt=""></a>
+								<div class="designBox">
+									<div class="picName">PHOTOGRAPHY NAME</div>
+									<div class="lbDesigner">DESIGN BY ISLAND</div>
+								</div>
+								<div class="annoBox flexBox">
+									<span class="nowPage">1</span>
+									<span class="allPage">/1</span>
+									<div class="slashSH">////</div>
+								</div>
+								<div class="closeBtn" @click="closeSlick()"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</main>
+			<div class="waveBox"><img src="images/godzilla/wave.png" alt=""></div>
+			<footer>
+				<div class="container">
+					<div class="footLink flexBox">
+						<a href="https://www.flickr.com/photos/islandpeng/albums" target="_blank" class="flickrLink">
+							<img src="images/icon_flickr_black.png" alt="Island's flickr">
+						</a>
+						<a href="https://www.instagram.com/island_mothra/" target="_blank" class="igLink">
+							<img src="images/icon_istagram_black.png" alt="Island's instagram">
+						</a>
+					</div>
+					<div class="rightBox">Copyright © 2020 INK.ISLAND. <span class="inblock">All rights reserved</span></div>
+					<div class="designer">DESIGN BY ISLAND</div>
+				</div>
+			</footer>
+			<div class="goTopBtn"><a href="#galleryBox" class="anchor"><img src="images/icon_goTop.png" alt="回頂端"></a>
+			</div>
+			<div class="blurMask"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js.lib/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+	<script type="text/javascript" src="js.lib/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js.lib/modernizr-custom.js"></script>
+	<script type="text/javascript" src="js/layout.js"></script>
+	<script type="text/javascript" src="js.lib/slick.min.js"></script>
+	<script type="text/javascript" src="js/godzilla.js"></script>
+
+</body>
+
+</html>

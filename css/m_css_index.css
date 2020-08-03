@@ -1,0 +1,159 @@
+/* media
+----------------------------------------------------------------------------*/
+/* 各解析度原始單位 */
+@media screen and (max-height: 540px) and (min-width: 769px){
+    .contentBord{
+        min-height: 540px!important;
+    }
+    .sliderImg{
+        min-height: 540px!important;
+    }
+}
+@media screen and (max-height: 560px) and (max-width: 768px){
+    .contentBord{
+        min-height: 560px!important;
+    }
+    .sliderImg{
+        min-height: calc(560px - 4rem)!important;
+    }
+}
+@media screen and (min-width: 1921px) {
+    .slashBox{
+        right: -1920px;
+    }
+    .greyRect{
+        right: calc(-1920px - 2rem);
+    }
+    .blackRect{
+/*        display: none;*/
+        left: 405px
+    }
+/*
+    .islandBox{
+        left: 100%;
+        top: 0.8rem;
+        padding: 1.3rem 0 0.8rem 0.8rem;
+        border-left: 0.6rem solid #000000;
+    }
+*/
+    .bb01{
+        left: 870px;
+    }
+}
+@media screen and (max-width: 1160px) {
+}
+@media screen and (max-width: 1080px) {
+}
+@media screen and (max-width: 1024px) {
+        
+}
+@media screen and (max-width: 980px) {
+    .sliderBox{
+        width: 73%;
+    }
+    .blackBox{
+        width: 20%;
+        position: relative;
+        margin-top: 1.6rem;
+    }
+    .blackRect{
+        top: 2.4rem;
+        left: 23vw;
+    }
+    .navOpen .psText{ left: calc(100% + 0.5rem);}
+}
+@media screen and (max-width: 768px) {
+    
+    
+    /* main
+    ------------------------------------------------------------------------------*/
+    
+    /** 視差物件 ********************************************************** start */
+    .slashBox{
+        font-size: 1.48rem;
+        top: 0;
+        right: -100vw;
+    }
+    .greyRect{
+        position: absolute;
+        bottom: -2rem;
+        left: calc(100vw - 0.7rem);
+    }
+    .blackRect{
+        width: 1rem; height: 2.4rem;
+        top: 0.2rem;
+        left: -0.6rem;
+    }
+    .bb01{
+        width: 0.8rem; height: 0.8rem;
+        border-width: 0.3rem;
+        top: 0.2rem; left: 25vw;
+    }
+    .bb02{
+        width: 0.4rem; height: 0.4rem;
+        border-width: 0.16rem;
+        bottom: 3.1rem; left: 80vw;
+    }
+    .bb03{
+        width: 0.2rem; height: 0.2rem;
+        border-width: 0.1rem;
+        bottom: 2.1rem; left: 35vw;
+    }
+    .bb04{
+        width: 0.4rem; height: 0.4rem;
+        border-width: 0.2rem;
+        top: 65%; left: 5vw;
+    }
+
+    /** 視差物件 ********************************************************** end */
+
+
+    .viewBlock{ display: block;}
+    .sliderBox{ width: auto;}
+/*
+    .navOpen .sliderBox{
+        filter: none;
+    }
+*/
+    .slider{ height: 100%;}
+    .sliderImg{ height: calc(100vh - 4rem)!important;}
+
+    .blackBox{
+        width: auto;
+        height: 0.4rem;
+        margin-top: 3.6rem;
+    }
+
+
+        /* islandBox */
+    .islandBox{
+        width: 72%;
+        left: 14%;
+        top: auto;
+        bottom: calc(100% + 0.2rem);
+        padding: 0;
+        -webkit-transition: 0.4s 0.3s;
+        transition: 0.4s 0.3s;
+    }
+    .navOpen .islandBox { opacity: 0;}
+    h1{ font-size: 0.6rem;}
+    .hdp{ font-size: 0.36rem;}
+    .textBottom{
+        -webkit-clip-path: polygon(50% 2000%, 0% 50%,50% 50%,120% 37%);
+        clip-path: polygon(50% 2000%, 0% 50%,50% 50%,120% 37%);
+    }
+    
+    
+  
+    
+
+    
+}
+@media screen and (max-width: 640px) {
+}
+@media screen and (max-width: 585px) {
+}
+@media screen and (max-width: 480px) {    
+}
+@media screen and (max-width: 319px) {
+}

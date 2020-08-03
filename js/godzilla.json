@@ -1,0 +1,372 @@
+[
+  {
+    "setNum": "第 1 組",
+    "l_b": [{
+        "anno": "左邊第 1 張，直的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@L/1-01.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "King Return"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/1-02.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Queen Landing"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/1-03.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Hell Comes"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/1-04.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Demon Awake"
+          }
+        ]
+      },
+      {
+        "anno": "左邊第 2 張，橫的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@L/2-01.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "My Vertor of Mothra"
+          }
+        ]
+      },
+      {
+        "anno": "左邊第 3 張，直的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@L/3-01.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Biollante poster"
+          }
+        ]
+      },
+      {
+        "anno": "左邊第 4 張，橫的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@L/4-01.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Eva 02 Robot vs Mothra"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/4-02.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Eva 01 Robot vs Godzilla"
+          }
+        ]
+      },
+      {
+        "anno": "左邊第 5 張，直的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@L/5-01.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Godziila : King of Monsters"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/5-02.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Queen and King"
+          }
+        ]
+      }
+    ],
+    "r_b": [{
+        "anno": "右邊第 1 張，橫的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@R/1-00.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Meet king of monsters"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/1.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Meet Godzilla"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/1-01.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "The Worst enemy awake"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/1-02.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "The Twins calling"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/1-03.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "ARGO is hunted by Demon"
+          }
+        ]
+      },
+      {
+        "anno": "右邊第 2 張，直的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@R/2-01.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Godzilla VS Kong 2020 poster.#1"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/2-02.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Godzilla VS Kong 2020 poster.#2 / Choose a side."
+          },
+          {
+            "imgUrl": "images/godzilla/@R/2-03.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Godzilla VS Kong 2020 poster.#3"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/2-04.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Godzilla VS Kong 2020 poster.#4 / Queen always win."
+          }
+        ]
+      },
+      {
+        "anno": "右邊第 3 張，橫的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@R/3-01.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Rodan"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/3-02.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Monster Zero"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/3-03.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Mothra's Egg"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/3-04.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Godzilla"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/3-05.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Megaguirus"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/3-06.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Biollante"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/3-07.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Battra"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/3-08.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Angirasu"
+          }
+        ]
+      },
+      {
+        "anno": "右邊第 4 張，橫的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@R/4.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Mothra is appearing"
+          }
+        ]
+      },
+      {
+        "anno": "右邊第 5 張，直的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@R/5.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "If -- Mothra use beta-wave to defeat Rodan"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/5-01.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "If -- rodan have atomic breath"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/5-02.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Goodbye Rodan.."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "setNum": "第 2 組",
+    "l_b": [{
+        "anno": "左邊第 1 張，直的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@L/6-01.JPG",
+            "imgDirect": "vertical",
+            "imgAlt": "Life will be continued"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/6-02.JPG",
+            "imgDirect": "vertical",
+            "imgAlt": " Godzilla's angel"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/6-03.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": " Queen REborn"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/6-04.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": " Mothra is trying to find where Godzilla is "
+          }
+        ]
+      },
+      {
+        "anno": "左邊第 2 張，橫的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@L/7.JPG",
+            "imgDirect": "horizon",
+            "imgAlt": "The last hope"
+          }
+        ]
+      },
+      {
+        "anno": "左邊第 3 張，直的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@L/8-01.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Monster Zero"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/8-02.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Mothra"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/8-03.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Godzilla"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/8-04.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Rodan"
+          }
+        ]
+      },
+      {
+        "anno": "左邊第 4 張，橫的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@L/9-01.JPG",
+            "imgDirect": "horizon",
+            "imgAlt": "Reborn"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/9-02.JPG",
+            "imgDirect": "horizon",
+            "imgAlt": "The Story Begine"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/9-03.JPG",
+            "imgDirect": "horizon",
+            "imgAlt": "Lose the War"
+          },
+          {
+            "imgUrl": "images/godzilla/@L/9-04.JPG",
+            "imgDirect": "vertical",
+            "imgAlt": "Destory"
+          }
+        ]
+      },
+      {
+        "anno": "左邊第 5 張，直的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@L/10.JPG",
+            "imgDirect": "vertical",
+            "imgAlt": "Monarch of Monsters"
+          }
+        ]
+      }
+    ],
+    "r_b": [{
+        "anno": "右邊第 1 張，橫的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@R/6-01.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Flying"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/6-02.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Rise of Rodan"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/6-03.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Parasitic"
+          }
+        ]
+      },
+      {
+        "anno": "右邊第 2 張，直的",
+        "imgs": [{
+          "imgUrl": "images/godzilla/@R/7-01.jpg",
+          "imgDirect": "vertical",
+          "imgAlt": "Mothra : Battle on Earth"
+        },
+        {
+          "imgUrl": "images/godzilla/@R/7-02.jpg",
+          "imgDirect": "vertical",
+          "imgAlt": "Mothra : Battle on Earth"
+        },
+        {
+          "imgUrl": "images/godzilla/@R/7-03.jpg",
+          "imgDirect": "vertical",
+          "imgAlt": "Mothra : Battle on Earth"
+        },
+        {
+          "imgUrl": "images/godzilla/@R/7-04.jpg",
+          "imgDirect": "vertical",
+          "imgAlt": "Mothra : Battle on Earth"
+        }
+        ]
+      },
+      {
+        "anno": "右邊第 3 張，橫的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@R/9.jpg",
+            "imgDirect": "horizon",
+            "imgAlt": "Mothra LOGO"
+          },
+          {
+            "imgUrl": "images/godzilla/@R/9-01.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Mothra : Reborn"
+          }
+        ]
+      },
+      {
+        "anno": "右邊第 4 張，橫的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@R/10.JPG",
+            "imgDirect": "horizon",
+            "imgAlt": "Bow to the Queen"
+          }
+        ]
+      },
+      {
+        "anno": "右邊第 5 張，直的",
+        "imgs": [{
+            "imgUrl": "images/godzilla/@R/11.jpg",
+            "imgDirect": "vertical",
+            "imgAlt": "Mothra Appears"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+/* media
+----------------------------------------------------------------------------*/
+/* 各解析度原始單位 */
+@media screen and (min-width: 1700px) {
+	.kvImg img{
+		width: auto;
+		height: 120%;
+	}
+}
+@media screen and (max-width: 1080px) {
+}
+@media screen and (max-width: 1024px) {        
+}
+@media screen and (max-width: 768px) {
+
+	/* main
+	------------------------------------------------------------------------------*/
+	main{ padding-top: 3.5rem;}
+
+	/* kv
+	---------------------------------------------*/
+	.hBox{
+			padding: 0;
+			bottom: calc(100% + 0.8rem);
+			width: 100%;
+	}
+	h2{
+			font-size: 0.4rem;
+	}
+	h3{
+			font-size: 0.26rem;
+	}
+	.kvTent{
+		height: 10.2rem;
+	}
+	.psText{
+			left: 0.5rem;
+	}
+	a.kv_anc{
+		font-size: 0.2rem;
+		top: 0.4rem;
+	}
+	a.kv_anc img{
+		width: 0.8rem;
+		margin: 0 auto 0.2rem auto;
+	}
+
+	/** 視差物件 ********************************************************** start */
+
+	.slashes{
+		font-size: 0.77rem;
+		right: -0.4em;
+		bottom: 50%;
+	}
+	.wCube{
+		width: 1.9rem;
+		height: 0.8rem;
+		top: -0.4rem;
+	}
+
+	/** 視差物件 ********************************************************** end */
+	
+    
+}
+@media screen and (max-width: 640px) {
+}
+@media screen and (max-width: 585px) {
+}
+@media screen and (max-width: 480px) {    
+}

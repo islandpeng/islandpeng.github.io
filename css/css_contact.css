@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+#contact{
+	position: relative;
+	height: 100%;
+}
+.contentBord{
+	padding-left: 10%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.viewBlock{
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 20.2rem;
+	max-width: 80%;
+	height: 100%;
+	margin: auto;
+	position: relative;
+	z-index: 0;
+}
+
+.layerBox{
+	position: absolute;
+	width: 100%;
+	height: 8.4rem;
+	max-height: 80%;
+	z-index: 0;
+}
+
+/** 視差物件 ********************************************************** start */
+.layer{
+    position: absolute;
+    width: 100%; height: 100%;
+}
+.shadowBox{
+	width: 100%;
+	height: 8.4rem;
+	max-height: 80%;
+	position: absolute;
+	bottom: -1.4rem;
+	left: 0.6rem;
+	background-color: #707070;
+}
+.wcub01{
+	width: 1rem;
+	height: 1rem;
+	background-color: #ffffff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.wcub02{
+	width: 0.8rem;
+	height: 34%;
+	background-color: #ffffff;
+	position: absolute;
+	right: 0;
+	top: 20%;
+}
+
+/** 視差物件 ********************************************************** end */
+
+.blackBox{
+	background-color: #000000;
+	width: 100%;
+	height: 8.4rem;
+	max-height: 80%;
+	color: #ffffff;
+	line-height: 1;
+	font-family: kozuka-gothic-pr6n, sans-serif;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 1.7rem;
+	z-index: 1;
+	position: relative;
+/*	mix-blend-mode: overlay;*/
+}
+h2{
+	font-size: 0.9rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	margin-bottom: 0.3rem;
+}
+h3{
+	font-size: 0.6rem;
+	font-weight: normal;
+	letter-spacing: 0.2em;
+}
+.mailBox{
+	position: absolute;
+	bottom: 0.9rem;
+	right: 2.4rem;
+	z-index: 999;
+}    
+.mailIcon{
+	width: 1.1rem;
+	max-width: 51px;
+	margin: auto;
+}
+.mailBox p{
+	font-family: Arial;
+	font-size: 0.36rem;
+	color: #ffcc00;
+	text-align: center;
+	letter-spacing: 0.1em;
+	margin-top: 0.4rem;
+}
+.slashBox{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 3.54rem; line-height: 1;
+	font-weight: 100;
+	letter-spacing: 0.075em;
+	color: rgba(255,255,255,0.8);
+	position: absolute;
+	top: -0.4em;
+	right: 0.1em;
+	
+}
+
+
+.psText, .illText{
+    font-size: 0.24rem; line-height: 1;
+    font-family: Arial;
+    font-weight: 600; letter-spacing: 0.4em;
+    color: #000000;
+    position: absolute;
+    top: 50%;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    z-index: 999;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.psText{
+	left: calc(100% + 2.4rem);
+	-webkit-transition: 0.3s 0.2s;
+	transition: 0.3s 0.2s;
+	text-shadow: 0 0 5px rgba(255,255,255,0.9);
+}
+.navOpen .psText{ left: calc(100% + 1rem);}
+.illText{    
+    right: 1rem;
+}
+
+
+
+
+
