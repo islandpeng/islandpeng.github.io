@@ -249,7 +249,8 @@ footer{
 	box-sizing: border-box;
 	text-align: center;
 	color: #3a3a3a;
-	padding-bottom: 1rem;
+    padding-bottom: 1rem;
+    pointer-events: none;
 }
 #index footer{
 	font-size: 0.22rem;
