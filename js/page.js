@@ -1,24 +1,20 @@
+var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+
 $(function(){
 	
-  //視差
+  //KV視差
 	var $scene = $('#scene');
 	$scene.parallax();
-  
-    
 	
 	// 錨點
 	$('a.anchor').on('click', function(){
-		// 讓捲軸用動畫的方式移動到 #header 的 top 位置
-		var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
 		var anchor = $($(this).attr('href'))
-		
 		$body.animate({
 			scrollTop: anchor.offset().top
 		}, 500);
- 
 		return false;
 	})
-	
+	// goTopBtn
 	var goTopBtn = $('.goTopBtn')
 	$(window).on('scroll', function(){
 		var winTop = $(this).scrollTop()
@@ -29,196 +25,217 @@ $(function(){
 			goTopBtn.removeClass('atTop')
 		}
 	}).scroll()
-	
-	
-	
-	// masonry 瀑布流
-	var masonryOptions = {
-		itemSelector: '.grid-item',
-		animationOptions: { queue: true, duration: 350 },
-		isAnimated: true,
-		columnWidth: '.grid-item',
-		percentPosition: true
-	}
-	
-	var $grid = $('.grid').imagesLoaded( function() {
-			// init Masonry after all images have loaded
-			$grid.masonry(masonryOptions)
-	});
-	
-	// 頁籤切換
-	var activeType = $($('.workTab.active').data('pictype'))
-	activeType.addClass('show')
 
-	var workTab = $('.workTab')
-	var gridBox = $('.gridBox')
-
-	workTab.on('click touchend', function(){
-		
-			var showGrid = $($(this).data('pictype'))
-			if(!$(this).hasClass('active')){
-					workTab.removeClass('active')
-					$(this).addClass('active')
-					gridBox.removeClass('show')
-					showGrid.addClass('show')
-			}
-	})
-	/*workTab.on('mouseenter focus', function(){
-		$(this).addClass('hover')
-		console.log('in')
-	}).on('mouseleave blur', function(){
-		$(this).removeClass('hover')
-		console.log('out')
-	})*/
-	
-	
-	// row 數切換
-	var masonryBox = $('.masonryBox')
-	var lineBtn = $('.lineBtn')
-	var grid = $('.grid')
-	var grid_item = $('.grid-item')
-	
-//	alert(wdh)
-	function rowChange(){
-		var wdh = $(window).width()
-		var grdW = grid_item.width()/grid.width()
-//		console.log(grdW)
-		
-		if(wdh<=768){
-//			if(0.9 <= grdW || grdW <= 0.21){
-			if(0.9 <= grdW || grdW <= 0.21){
-				grid_item.css({width: ''})
-				$('.line1').addClass('active').siblings('.lineBtn').removeClass('active')
-			}
-		}else if(wdh>768){
-//			if(grdW <= 0.21 || 0.9 <= grdW){
-			if(grdW <= 0.34 || 0.9 <= grdW){
-				grid_item.css({width: ''})
-				$('.line3').addClass('active').siblings('.lineBtn').removeClass('active')
-			}
-		}
-	}
-	
-	
-	lineBtn.on('click', function(){
-		var linNu = $(this).data('line')
-		if(!$(this).hasClass('active')){
-			$(this).addClass('active').siblings('.lineBtn').removeClass('active')
-			grid_item.css({width: linNu})
-			$grid.masonry('layout')
-			// grid_item.addClass('wth10')
-		}else{
-			return false
-		}
-		
-	})
-	
-	
-	// lightBox slider
-	var lightSlideBox = $('.lightSlideBox')
-	var SD = $('.SD')
-	var slider = $('.slider')
-	var newTabBtn = $('.newTabBtn')
-	var picName = $('.picName')
-	var nowPage = $('.nowPage')
-	var allPage = $('.allPage')
-	var closeDiv = $('.slideMsk, .closeBtn')
-	var startSlider
-	
-	function sliderStart(){
-		slider.slick({
-			arrows: true,
-			dots: false,
-			infinite: true,
-			initialSlide: startSlider,
-			speed: 500,
-			adaptiveHeight: true
-		})
-	}
-	
-	slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-		var nowP = nextSlide+1
-		var imgNextLink = $('.SD.show').find(sliderImg).eq(nextSlide).find('img').attr('src')
-		
-		nowPage.html(nowP)
-		picName.html($('.SD.show').find(sliderImg).eq(nextSlide).find('img').attr('alt'))
-		newTabBtn.attr('href', imgNextLink)
-	})
-	
-	grid_item.on('click', function(){
-		var sdShow = $($(this).parent(grid).data('sd'))
-		var imgLink = $(this).find('img').attr('src')
-//		console.log(imgLink)
-		
-		sdShow.addClass('show').show()
-		
-		startSlider = $(this).index()
-		allPage.html('/'+ $(this).parent(grid).find(grid_item).length)
-		nowPage.html(startSlider+1)
-		picName.html($(this).find('img').attr('alt'))
-		newTabBtn.attr('href', imgLink)
-		lightSlideBox.addClass('open')
-		sliderStart()
-		slick_rwd()
-	})
-	
-	closeDiv.on('click', function(){
-		lightSlideBox.removeClass('open')
-		slider.slick('unslick')
-		SD.removeClass('show').hide()
-//		slider.html('')
-	})
-	
-	gridBox.each(function(){
-//		var BItem = $(this).find('.grid').html()
-		var _sd = $($(this).children('.grid').data('sd'))
-//		console.log($(this).children('.grid').data('sd'))
-		_sd.find(slider).html($(this).find('.grid').html())
-	})
-	slider.find('div').removeClass('grid-item')
-	
-	
-	var sliderImg = $('.lightSlideBox .sliderImg')
-	var tooLong
-	
-	function slick_rwd(){
-			// var winH = $(window).height()
-			// var winW = $(window).width()
-			var winH = $('.sliderBox').height()
-			var winW = $('.sliderBox').width()
-			var slicH = $('.sliderBox').height()
-//			console.log(slicH)
-			sliderImg.each(function(){
-				var slickImgI = $(this).find('img')
-				tooLong = slickImgI.height()/slickImgI.width()
-				// console.log(tooLong)
-				var VH = $(this).data('imgb')
-				$(this).css({height: slicH})
-				
-				if(winW > winH){
-						if(VH == 'vertical'){
-								slickImgI.css({ height: '100%', width: 'auto'})
-						}else{
-								slickImgI.css({ height: 'auto', width: '100%'})
-						}
-				}else{
-						if(VH == 'horizon'){
-								slickImgI.css({ height: 'auto', width: '100%'})
-						}else{
-								if(tooLong>=1.26){
-									slickImgI.css({ height: '100%', width: 'auto'})
-								}else{
-									slickImgI.css({ height: 'auto', width: '100%'})
-								}
-						}  
-				}
-			})
-	}
-
-	$(window).resize(function(){
-		slick_rwd()
-		rowChange()
-	}).resize()
-	    
 })
 
+
+if(window.Vue){
+
+/** VUE ********************************************** */
+var _this
+// masonry 瀑布流 屬性設定
+var masonryOptions = {
+	itemSelector: '.grid-item',
+	animationOptions: { queue: true, duration: 350 },
+	isAnimated: true,
+	columnWidth: '.grid-item',
+	percentPosition: true
+}
+var Vm = new Vue({
+	el: '.wrapper',
+  data: {
+		loadingFinished: false,
+		category: [],
+		grid: null,
+		gridDone: false,
+		swiper: null,
+		swiperDone: false,
+		tabIndex: null,
+		initRowNum: 3,
+		initRowNum_m: 1,
+		rowNum: 0,
+		linNu: '',
+  },
+	beforeMount(){
+		_this = this
+		_this.category = category
+	},
+  mounted() {
+    this.$nextTick(() => {
+			var query_init = Modernizr.mq('(max-width: 768px)');
+			_this.init(query_init)
+      $(window).on('resize', () => {
+				var winW = $(window).width()
+				var query = Modernizr.mq('(max-width: 768px)');
+				_this.rwd_ROW(winW, query)
+      }).resize()
+    })
+  },
+  methods: {
+		init(query){ // 一進網頁狀態
+			$('.line'+_this.rowNum).addClass('active')
+			try{
+        var prevRow = sessionStorage.getItem('isp_nowRow')
+        if(prevRow != null){
+          _this.rowNum = prevRow
+        }else{
+					if(query){
+						_this.rowNum = _this.initRowNum_m
+					}else{
+						_this.rowNum = _this.initRowNum
+					}
+				}
+
+      }catch(error){
+        console.log('Get Value Fail.')
+        console.log(error)
+      }
+			
+		},
+		reMasonry(){ //重建瀑布流
+			_this.grid = $('.box'+_this.tabIndex).find('.grid').imagesLoaded( function() {
+				// init Masonry after all images have loaded
+				_this.grid.masonry(masonryOptions)
+				$('.grid-item').css({'width': _this.linNu})
+				_this.grid.masonry('layout')
+				_this.gridDone = true
+				_this.loadingFinished=true
+			});
+		},
+		changeTabBox(e, cid){ // 頁籤切換
+			_this.grid.masonry('destroy')
+			_this.loadingFinished = false
+			if(!_this.category[cid].loading){
+				_this.category[cid].loading = true
+			}
+			_this.category.forEach((item, index)=>{
+				if(index==cid){
+					item.active=true
+				}else{
+					item.active=false
+				}
+			})
+		},
+		changeRow(num){
+			_this.rowNum = num
+			try{
+        var nowRow = JSON.stringify(_this.rowNum)
+        sessionStorage.setItem('isp_nowRow', nowRow)
+
+      }catch(error){
+        console.log('Set Value Fail.')
+        
+      }
+		},
+		popUpShow(cid){
+			$('.lightSlideBox').stop(true).fadeIn(300)
+			if(!_this.swiperDone){
+				_this.buildSwiper(cid)
+			}else{
+				_this.swiper.slideTo(cid+1)
+			}
+			
+		},
+		popUpClose(){
+			$('.lightSlideBox').stop(true).fadeOut(200)
+		},
+		buildSwiper(index){ // 建立輪播
+      _this.swiper = new Swiper('.swiper-container', {
+        initialSlide: index,
+        loop: true,
+        navigation: {
+          nextEl: '.swpB_R',
+          prevEl: '.swpB_L',
+        },
+        on: {
+					init: function(e){
+						_this.swiperDone = true
+					},
+          slideChange: function(e){
+            // console.log(e.activeIndex)
+						var x = e.activeIndex
+						if(x<=0){
+							x = _this.category[_this.tabIndex].imgList.length
+						}else if(x > _this.category[_this.tabIndex].imgList.length){
+							x = 1
+						}
+						$('.nowPage').text(x)
+						$('.picName').text(_this.category[_this.tabIndex].imgList[x-1].imgAlt)
+						$('.newTabBtn').attr('href', _this.category[_this.tabIndex].imgList[x-1].imgUrl)
+          },
+        },
+      });
+    },
+		/* RWD ----------------------*/
+		rwd_ROW(winW, query){
+			if(query && _this.rowNum==5){
+				_this.rowNum = 3
+			}else if(!query && _this.rowNum == 1){
+				_this.rowNum = 3
+			}
+		},
+	},
+	watch:{
+		loadingFinished(e){
+      if(e){
+        $('.loadingBox').stop(true).fadeOut(350)
+      }else{
+        $('.loadingBox').stop(true).fadeIn(150)
+      }
+    },
+		category:{
+			handler: function(e){
+				e.forEach((item, index)=>{
+					if(item.active){
+						_this.tabIndex = index
+					}
+				})
+			},
+			deep: true,
+		},
+		rowNum:{
+			handler: function(e){
+				$('.lineBtn').removeClass('active')
+				$('.line'+e).addClass('active')
+				switch(Number(e)){
+					case 1:
+						_this.linNu = '100%'
+						break;
+					case 3:
+						_this.linNu = '33.333%'
+						break;
+					case 5:
+						_this.linNu = '20%'
+						break;
+					default:
+						_this.linNu = '33.333%'
+				}
+				if(_this.gridDone){
+					$('.grid-item').css({'width': _this.linNu})
+					_this.grid.masonry('layout')
+				}
+			},
+			// immediate: true,
+		},
+		tabIndex(e, oldVal){
+			if(!_this.category[e].loading){
+				_this.category[e].loading = true
+			}
+			if(oldVal!=null && _this.swiperDone){
+				_this.swiper.destroy()
+				_this.swiperDone = false
+			}
+			
+		}
+	},
+	computed:{
+		footerYear(){
+			return new Date().getFullYear()
+		}
+	},
+	updated(){
+		_this.reMasonry()
+	},
+})
+
+}

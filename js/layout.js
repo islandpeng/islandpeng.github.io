@@ -31,7 +31,7 @@ $(function(){
 $(window).on('load', function(){
 	var timeSec = 1.5
 	
-	$('.loadingBox').delay(timeSec*1000).fadeOut(300)
+	$('.loadingBox:not(.withVue)').delay(timeSec*1000).fadeOut(300)
 	
 	
 	// 大標進場動畫_index
