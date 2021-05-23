@@ -63,6 +63,7 @@ window.onload = function(){
 	tl.to($('.hImg img'), 1.8, {opacity:1}, '+=1.8')
     .to($('.hImg img'), 1.2, {scale: 1}, '-=1.8')
 		.to($('h3'), 1.3, {opacity:1},'-=1')
+  vm.alreadyLoad = true
 }
 
 
@@ -73,6 +74,7 @@ var vm = new Vue({
   el: '#godzillaWrap',
   data: {
     loadingFinished: false,
+    alreadyLoad: false,
     imgList: [],
     nowSlick: [],
     swiper: null,
@@ -157,7 +159,7 @@ var vm = new Vue({
   watch:{
 		loadingFinished:{
       handler: function(e){
-        if(e){
+        if(e && _this.alreadyLoad){
           $('.loadingBox').stop(true).fadeOut(350)
         }else{
           $('.loadingBox').stop(true).fadeIn(150)
@@ -166,6 +168,11 @@ var vm = new Vue({
       // deep: true,
       // immediate: true,
     },
+    alreadyLoad(e){
+      if(e && _this.loadingFinished){
+        $('.loadingBox').stop(true).fadeOut(350)
+      }
+    }
   },
   computed:{
 		footerYear(){
