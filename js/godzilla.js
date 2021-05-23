@@ -83,12 +83,10 @@ var vm = new Vue({
 	},
   mounted() {
     this.imgData()
-    this.$nextTick(() => {
-      // this.sliderStart()
-      $(window).resize(() => {
-        // this.slick_rwd()
-      }).resize()
-    })
+
+    // _this.$nextTick(()=>{
+    //   _this.loadingFinished[0]=true
+    // })
   },
   methods: {
     imgData() {
@@ -157,12 +155,16 @@ var vm = new Vue({
     },
   },
   watch:{
-		loadingFinished(e){
-      if(e){
-        $('.loadingBox').stop(true).fadeOut(350)
-      }else{
-        $('.loadingBox').stop(true).fadeIn(150)
-      }
+		loadingFinished:{
+      handler: function(e){
+        if(e){
+          $('.loadingBox').stop(true).fadeOut(350)
+        }else{
+          $('.loadingBox').stop(true).fadeIn(150)
+        }
+      },
+      // deep: true,
+      // immediate: true,
     },
   },
   computed:{
