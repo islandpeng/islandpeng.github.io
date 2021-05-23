@@ -1,13 +1,10 @@
+var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
 // 錨點
 $('a.anchor').on('click', function () {
-  // 讓捲軸用動畫的方式移動到 #header 的 top 位置
-  var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
   var anchor = $($(this).attr('href'))
-
   $body.animate({
     scrollTop: anchor.offset().top - 50
   }, 500);
-
   return false;
 })
 
@@ -73,17 +70,23 @@ window.onload = function(){
 /*****************************************************************/
 //vue
 var vm = new Vue({
-  el: '#galleryBox',
+  el: '#godzillaWrap',
   data: {
+    loadingFinished: false,
     imgList: [],
-    nowSlick: []
+    nowSlick: [],
+    swiper: null,
+		swiperDone: false,
   },
+  beforeMount(){
+		_this = this
+	},
   mounted() {
     this.imgData()
     this.$nextTick(() => {
-      this.sliderStart()
+      // this.sliderStart()
       $(window).resize(() => {
-        this.slick_rwd()
+        // this.slick_rwd()
       }).resize()
     })
   },
@@ -100,122 +103,76 @@ var vm = new Vue({
         }
       })
     },
-    sliderStart() {
-      var slider = $('.slider')
-      var sliderImg = $('.lightSlideBox .sliderImg')
-      var newTabBtn = $('.newTabBtn')
-      var picName = $('.picName')
-      var nowPage = $('.nowPage')
-      
-      slider.slick({
-        arrows: true,
-        dots: false,
-        infinite: true,
-        // initialSlide: startSlider,
-        speed: 500,
-        adaptiveHeight: true
-      })
-      slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
-        var nowP = nextSlide + 1
-        var imgNextLink = this.nowSlick[nextSlide].imgUrl
-
-        nowPage.html(nowP)
-        picName.html(this.nowSlick[nextSlide].imgAlt)
-        newTabBtn.attr('href', imgNextLink)
-      })
+    buildSwiper(index){ // 建立輪播
+      var TF = false
+      if(_this.nowSlick.length>1){
+        TF = true
+      }
+      _this.swiper = new Swiper('.swiper-container', {
+        // initialSlide: index,
+        loop: TF,
+        navigation: {
+          nextEl: '.swpB_R',
+          prevEl: '.swpB_L',
+        },
+        on: {
+					init: function(e){
+						_this.swiperDone = true
+            _this.loadingFinished = true
+					},
+          slideChange: function(e){
+            // console.log(e.activeIndex)
+						var x = e.activeIndex
+						if(x<=0){
+							x = _this.nowSlick.length
+						}else if(x > _this.nowSlick.length){
+							x = 1
+						}
+						$('.nowPage').text(x)
+						$('.picName').text(_this.nowSlick[x-1].imgAlt)
+						$('.newTabBtn').attr('href', _this.nowSlick[x-1].imgUrl)
+          },
+        },
+      });
     },
-    slick_rwd() {
-      var tooLong
-      // var winH = $(window).height()
-      // var winW = $(window).width()
-      var winH = $('.sliderBox').height()
-      var winW = $('.sliderBox').width()
-      var slicH = $('.sliderBox').height()
-      //			console.log(slicH)
-      $('.lightSlideBox .sliderImg').each(function () {
-        var slickImgI = $(this).find('img')
-        tooLong = slickImgI.height() / slickImgI.width()
-        // console.log(tooLong)
-        var VH = $(this).data('imgb')
-        $(this).css({
-          height: slicH
-        })
-
-        if (winW > winH) {
-          if (VH == 'vertical') {
-            slickImgI.css({
-              height: '100%',
-              width: 'auto'
-            })
-          } else {
-            slickImgI.css({
-              height: 'auto',
-              width: '100%'
-            })
-          }
-        } else {
-          if (VH == 'horizon') {
-            slickImgI.css({
-              height: 'auto',
-              width: '100%'
-            })
-          } else {
-            if (tooLong >= 1.26) {
-              slickImgI.css({
-                height: '100%',
-                width: 'auto'
-              })
-            } else {
-              slickImgI.css({
-                height: 'auto',
-                width: '100%'
-              })
-            }
-          }
-        }
-      })
-    },
-    // slideBox() {
-    //   var slider = $('.slider')
-    //   var sliderImg = $('.lightSlideBox .sliderImg')
-    //   var newTabBtn = $('.newTabBtn')
-    //   var picName = $('.picName')
-    //   var nowPage = $('.nowPage')
-
-    //   slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-    //     var nowP = nextSlide + 1
-    //     var imgNextLink = $('.SD.show').find(sliderImg).eq(nextSlide).find('img').attr('src')
-
-    //     nowPage.html(nowP)
-    //     picName.html($('.slickDiv.show').find(sliderImg).eq(nextSlide).find('img').attr('alt'))
-    //     newTabBtn.attr('href', imgNextLink)
-    //   })
-    // },
     openSlick(index, imgs, cid) {
-      // this.slickUnslick()
-      $('.lightSlideBox').addClass('open')
-      $('.slickDiv>div').eq(index).show()
-      $('.slickDiv>div').eq(index).find('.choosePic').eq(cid).show()
-      console.log(imgs)
-      this.nowSlick = imgs
-      $('.slickDiv').addClass('show').show()
-      $('.nowPage').html('1')
-      $('.allPage').html('/' + this.nowSlick.length)
-      $('.picName').html(this.nowSlick[0].imgAlt)
-      $('.newTabBtn').attr('href', this.nowSlick[0].imgUrl)
-      this.sliderStart()
-      this.slick_rwd()
-      // alert('執行')
+      if(_this.swiperDone){
+        _this.swiper.destroy()
+        _this.swiperDone = false
+      }
+      _this.loadingFinished = false
+      _this.nowSlick = imgs
+      $('.picName').text(_this.nowSlick[0].imgAlt)
+      $('.newTabBtn').attr('href', _this.nowSlick[0].imgUrl)
+      $('.lightSlideBox').stop(true).fadeIn(300)
     },
     closeSlick() {
-      $('.lightSlideBox').removeClass('open')
-      $('.slickDiv').removeClass('show').hide()
-      $('.slickDiv>div').hide()
-      $('.choosePic').hide()
-      this.slickUnslick()
+      $('.lightSlideBox').stop(true).fadeOut(200)
+      _this.swiper.destroy()
+      _this.swiperDone = false
+      $('.nowPage').text('1')
+      setTimeout(()=>{
+        _this.nowSlick = []
+      },300)
     },
-    slickUnslick() {
-      $('.slider').slick('unslick')
+  },
+  watch:{
+		loadingFinished(e){
+      if(e){
+        $('.loadingBox').stop(true).fadeOut(350)
+      }else{
+        $('.loadingBox').stop(true).fadeIn(150)
+      }
+    },
+  },
+  computed:{
+		footerYear(){
+			return new Date().getFullYear()
+		}
+	},
+  updated(){
+    if(!_this.swiperDone){
+      _this.buildSwiper()
     }
   }
 })

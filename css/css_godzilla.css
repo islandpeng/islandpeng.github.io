@@ -22,21 +22,6 @@ body#godzilla {
 	color: #ffffff;
 }
 
-/** footerBG *************************************/
-/* .footerBG{
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url(../images/godzilla/GG_footerBG.png);
-	background-repeat: repeat-x;
-	background-position: bottom -5rem center;
-	background-size: 38rem auto;
-	background-color: #000000;
-	z-index: -1;
-} */
-
 /* kv
 ---------------------------------------------*/
 .kv {
@@ -419,16 +404,17 @@ img.loadBot {
 	height: 100%;
 	min-height: 540px;
 	background-color: rgba(0, 0, 0, 0.9);
-	z-index: -999;
+	/* z-index: -999;
 	opacity: 0;
-	-webkit-transition: 0.3s;
-	transition: 0.3s;
+	transition: 0.3s; */
+	z-index: 999;
+	display: none;
 }
 
-.lightSlideBox.open {
+/* .lightSlideBox.open {
 	z-index: 9999;
 	opacity: 1;
-}
+} */
 
 .lightSlideBox>.flexBox {
 	width: 100%;
@@ -459,36 +445,54 @@ img.loadBot {
 	position: relative;
 	margin-bottom: 1rem;
 }
-
 .slickDiv {
-	width: 100%;
+	width: calc(100% + 3em);
 	height: 100%;
 	position: relative;
-	display: none;
-}
-.slickDiv.show{
-	display: block;
-}
-.slickDiv>div,
-.choosePic{
-	width: 100%;
-	height: 100%;
-	display: none;
+	left: 50%;
+	transform: translateX(-50%);
+	/* display: none; */
 }
 .slider {
 	width: 100%;
 	height: 100%;
 	/*	position: relative;*/
 }
+.slider .swiper-slide{
+	padding: 0 2rem;
+	box-sizing: border-box;
+}
+.slider .swiper-slide img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+.swpBtnBox > a{
+	position: absolute;
+	width: 1.2rem;
+	height: 1.2rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	z-index: 999;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 50%;
+	top: 50%;
+}
+.swpB_R{
+	background-image: url(../images/graphic/arrow_R.svg);
+	right: 0;
+}
+.swpB_L{
+	background-image: url(../images/graphic/arrow_L.svg);
+	left: 0;
+}
 
 .lightSlideBox .sliderImg {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	/*
-	max-height: 800px;
-	overflow: hidden;
-*/
 }
 
 .lightSlideBox .sliderImg div {
@@ -574,9 +578,10 @@ img.loadBot {
 	position: absolute;
 	top: -0.6rem;
 	right: -1.7rem;
-	cursor: pointer;
+	/* cursor: pointer; */
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
+	z-index: 99;
 }
 
 .closeBtn:before,

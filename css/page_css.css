@@ -435,8 +435,21 @@
 		padding-top: 0.8rem;
 		padding-bottom: 1.5rem;
 	}
-	.swpBtnBox{
-		display: none;
+	.swpBtnBox > a{
+		width: 0.6rem;
+		height: 0.6rem;
+		top: calc(100% + 1.7em);
+	}
+	.swiper-container{
+		overflow: visible!important;
+	}
+	.swpB_R{
+		right: auto;
+		left: calc(55% + 0.5rem);
+	}
+	.swpB_L{
+		left: auto;
+		right: calc(55% + 0.5rem);
 	}
 
 	/* lineNum
