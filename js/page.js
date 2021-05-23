@@ -103,6 +103,7 @@ var Vm = new Vue({
 			});
 		},
 		changeTabBox(e, cid){ // 頁籤切換
+			if(_this.category[cid].active) return false
 			_this.grid.masonry('destroy')
 			_this.loadingFinished = false
 			if(!_this.category[cid].loading){
